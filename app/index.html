@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Midnight Boulevard — Cover Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1><span class="pink">MIDNIGHT</span> <span class="cyan">BOULEVARD</span></h1>
+  <p>Turn your photos into GTA-style cover art. Four looks, three sizes, seven panels — pick a look, fill the cast, export a PNG.</p>
+  <noscript>This cover studio needs JavaScript to draw the poster.</noscript>
+</header>
+<main class="layout">
+  <section class="stage">
+    <canvas id="poster" width="1080" height="1350"></canvas>
+  </section>
+  <aside class="controls" id="controls">
+    <h2>1 · Look</h2>
+    <div class="row" id="look-row"></div>
+    <h2>2 · Size</h2>
+    <div class="row" id="size-row"></div>
+    <h2>3 · Words</h2>
+    <label class="field">Title</label>
+    <input type="text" id="in-title" value="MIDNIGHT BOULEVARD" maxlength="24">
+    <label class="field">Tagline</label>
+    <input type="text" id="in-tagline" value="ONE CITY. SEVEN LIVES. NO WAY OUT." maxlength="48">
+    <label class="field">Quote ribbon</label>
+    <input type="text" id="in-quote" value="Every street has a price." maxlength="48">
+    <h2>4 · The cast</h2>
+    <div id="panel-list"></div>
+    <h2>5 · Export</h2>
+    <button class="export" id="btn-export">Export PNG</button>
+    <p class="hint">Your photos never leave this machine. The app works fully offline.</p>
+  </aside>
+</main>
+<footer></footer>
+<script src="src/theme.js"></script>
+<script src="src/render.js"></script>
+<script src="src/editor.js"></script>
+</body>
+</html>
